@@ -2,7 +2,6 @@ package ro.pub.cs.systems.eim.practicalTest01Var04
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
@@ -27,6 +26,11 @@ class PracticalTest01Var04MainActivity : AppCompatActivity() {
     public var checked1 : Boolean = false
     public var checked2 : Boolean = false
     public lateinit var text1 : TextView
+
+    companion object {
+        private const val OK = 1
+        private const val ERR = 0
+    }
 
 
 
@@ -55,7 +59,11 @@ class PracticalTest01Var04MainActivity : AppCompatActivity() {
 
 
         btn1.setOnClickListener {
-            startActivity(Intent(this@PracticalTest01Var04MainActivity, Activity2::class.java))
+            //val intent1 : Intent = Intent(this@PracticalTest01Var04MainActivity, PracticalTest01Var04SecondaryActivity::class.java)
+            startActivity(Intent(this@PracticalTest01Var04MainActivity, PracticalTest01Var04SecondaryActivity::class.java))
+//            intent.putExtra("TEXT1", edit1.text)
+//            intent.putExtra("TEXT2", edit2.text)
+
         }
 
         btn2.setOnClickListener {
